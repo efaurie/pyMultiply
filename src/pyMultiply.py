@@ -13,8 +13,8 @@ def init():
     parser = argparse.ArgumentParser()
     parser.add_argument('-script', help='The python script to execute on files')
     parser.add_argument('-source', help='The source directory - which files to execute on')
-    parser.add_argument('-max_depth', default=0, help='The maximum number of directories it will traverse from source')
-    parser.add_argument('-max_processes', default=5, help='The maximum number of processes to spawn simultaneously')
+    parser.add_argument('-max_depth', type=int, default=0, help='The maximum number of directories it will traverse from source')
+    parser.add_argument('-max_processes', type=int, default=5, help='The maximum number of processes to spawn simultaneously')
     return parser.parse_args()
 
 
